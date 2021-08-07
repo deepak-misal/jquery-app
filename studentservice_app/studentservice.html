@@ -1,0 +1,58 @@
+<html>
+    <head>
+        <title>Student Controller</title>
+        <script src="https://code.jquery.com/jquery-3.6.0.js"
+    integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="
+    crossorigin="anonymous"></script>
+    <style>
+        table {
+            margin: 0 auto;
+            font-size: large;
+            border: 1px solid black;
+        }
+        th,
+        td {
+            font-weight: bold;
+            border: 1px solid black;
+            padding: 10px;
+            text-align: center;
+        }
+  
+        td {
+            font-weight: lighter;
+        }
+    </style>
+    </head>
+    <body>
+        <form method="GET" id="studentform">
+            <label for="rollno">Roll No:</label>
+            <input type="text" id="rollno" name="rollno" required><br><br>
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required><br><br>
+            <label for="age">Age:</label>
+            <input type="range" id="age" name="age" min="0" max="50" value="0"oninput="amount.value=age.value" required>                                                       
+            <output id="amount" name="amount" for="age">0</output><br><br>
+            <label for="email">Email</label>
+            <input type="email" name="email" id="email" required /><br><br>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date"><br><br>
+            <input type="radio" class="radioBtnClass" name="gender" value="male" />Male
+            <input type="radio" class="radioBtnClass" name="gender" value="female" />Female<br/><br>
+            <button type="submit" id="submit">Submit</button>
+            <button id="addStudent">Add Student</button>
+            <button id="displayStudent">Display</button><br><br>
+            <label id="total">Total:</label>
+            <table id='table'>
+                <tr>
+                    <th>Roll NO</th>
+                    <th>Name</th>
+                    <th>Age</th>
+                    <th>Email</th>
+                    <th>Date</th>
+                    <th>Gender</th>
+                </tr>
+            </table>
+            <script src="studentservice.js"></script>
+        </form>
+    </body>
+</html>
